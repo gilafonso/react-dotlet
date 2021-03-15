@@ -20,6 +20,7 @@
     "redux": "^3.5.2",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^2.1.0",
+    "serve": "^11.3.2",
     "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
@@ -111,14 +112,16 @@
     "stylelint": "stylelint \"components/**/*.css\" \"pages/**/*.css\"",
     "lint": "npm run eslint && npm run stylelint",
     "lint:watch": "watch 'npm run lint' components pages core test",
-    "test": "mocha -r jsdom-global/register --require ignore-styles --recursive --compilers js:babel-register test/**/*.js components/**/*test*.js",
     "test:watch": "mocha -r jsdom-global/register --require ignore-styles --recursive --compilers js:babel-register --watch test/**/*.js components/**/*test*.js",
     "clean": "node run clean",
-    "build": "node run build",
     "build:debug": "node run build --debug",
     "publish": "node run publish",
     "publish:debug": "node run publish --debug",
-    "start": "node run",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
   }
 }
