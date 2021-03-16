@@ -66,6 +66,7 @@ const config = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': isDebug ? '"development"' : '"production"',
+      'process.env.PORT': app.listen(process.env.PORT || 3000),
       __DEV__: isDebug,
     }),
     // Emit a JSON file with assets paths
