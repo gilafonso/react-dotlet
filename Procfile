@@ -1,1 +1,1 @@
-web: node run start [--release]
+web: node run.js
