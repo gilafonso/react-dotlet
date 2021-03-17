@@ -14,7 +14,7 @@ public/index.html
 public/sitemap.xml
 
 # Node.js and NPM
-/node_modules
+*node_modules
 npm-debug.log
 
 # Firebase
